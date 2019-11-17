@@ -71,16 +71,14 @@
     left: 0;
     
     &::after{
+      @include absoluteCenter;
+
       content: "";
       height: 1.3rem;
       width: 1.3rem;
       border-radius: 50%;
       display: block;
       background-color: $color-primary;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       opacity: 0;
       transition: opacity .2s;
     }
