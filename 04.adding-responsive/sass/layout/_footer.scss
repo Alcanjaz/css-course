@@ -2,11 +2,19 @@
   background-color: $color-grey-dark-3;
   font-size: 1.4rem;
   padding: 10rem 0;
-  color: $color-grey-light-1;;
+  color: $color-grey-light-1;
+
+  @include makeResponsive(tablet_portrait) {
+    padding: 8rem 0;
+  }
 
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include makeResponsive(tablet_portrait) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__logo {
@@ -15,8 +23,13 @@
   }
 
   &__navigation {
-      border-top: 1px solid $color-grey-dark;
-      display: inline-block;
+    border-top: 1px solid $color-grey-dark;
+    display: inline-block;
+    
+    @include makeResponsive(tablet_portrait) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -49,11 +62,16 @@
     }
   }
 
-  &__copyright{
+  &__copyright {
     border-top: 1px solid $color-grey-dark;
     display: inline-block;
     padding-top: 2rem;
     width: 80%;
-    float: right;   
+    float: right;
+
+    @include makeResponsive(tablet_portrait) {
+      width: 100%;
+      float: none;
+    }
   }
 }
