@@ -5,11 +5,18 @@
   box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
   border-radius: 3px;
   padding: 6rem;
+  padding-left: 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
   @include makeResponsive(tablet_portrait) {
-    transform: none;
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include makeResponsive(phone) {
+    transform: skewX(0);
   }
 
   &__shape {
@@ -23,9 +30,10 @@
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+    overflow: hidden;
 
-    @include makeResponsive(tablet_portrait) {
-      transform: none;
+    @include makeResponsive(phone) {
+      transform: translateX(-3rem) skewX(0);
     }
   }
 
@@ -39,8 +47,8 @@
   &__text {
     transform: skewX(12deg);
 
-    @include makeResponsive(tablet_portrait) {
-      transform: none;
+    @include makeResponsive(phone) {
+      transform: skewX(0);
     }
   }
 
